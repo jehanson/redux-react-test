@@ -4,6 +4,8 @@ import createLogger from 'redux-logger';
 import auth from '../reducers/auth';
 import { selectedUsersPage, usersByPage } from '../reducers/users';
 import { selectedReposPage, reposByPage, repoTableSize } from '../reducers/repos';
+import { transcript } from '../reducers/transcript';
+
 
 const logger = createLogger();
 const reducer = combineReducers(
@@ -14,6 +16,7 @@ const reducer = combineReducers(
     selectedReposPage,
     reposByPage,
     repoTableSize,
+    transcript
   }
 );
 

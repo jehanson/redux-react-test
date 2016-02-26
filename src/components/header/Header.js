@@ -15,6 +15,7 @@ export default class Header extends Component {
     const isAboutPage = pathname.indexOf('about') > -1;
     const isUsersPage = pathname.indexOf('users') > -1;
     const isReposPage = pathname.indexOf('repos') > -1;
+    const isTranscript = pathname.indexOf('transcript') > -1;
 
     return (
       !isLoginPage &&
@@ -31,6 +32,7 @@ export default class Header extends Component {
               <ul className="nav navbar-nav">
                 <li title="Github Users with over 1000 Followers" className={isUsersPage ? 'nav-item active' : 'nav-item'}><Link className="nav-link" to="/users">Most Followed Users</Link></li>
                 <li title="Github Repos with over 10000 Stars" className={isReposPage ? 'nav-item active' : 'nav-item'}><Link className="nav-link" to="/repos">Most Starred Repos</Link></li>
+                <li title="C-SPAN Transcript" className={isTranscript ? 'nav-item active' : 'nav-item'}><Link className="nav-link" to="/transcript">C-SPAN Transcript</Link></li>
                 <li title="About" className={isAboutPage ? 'nav-item active' : 'nav-item'}><Link className="nav-link" to="/about">About Us</Link></li>
               </ul>
 
