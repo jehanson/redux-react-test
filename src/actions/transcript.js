@@ -17,7 +17,6 @@ export function listenForTranscript() {
     const socket = io('https://openedcaptions.com');
 
     socket.on('word', function (data) {
-      console.log('got word! ' + data.data.body);
       dispatch({
         type: TRANSCRIPT_WORD,
         word: data.data.body

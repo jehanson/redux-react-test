@@ -5,11 +5,8 @@ import { connect } from 'react-redux';
 
 
 class Word extends React.Component {
-
-
   render() {
-    console.log('rendering word');
-    return
+    return <span>{this.props.word.word} </span>
   }
 }
 
@@ -21,7 +18,7 @@ Word.propTypes = {
 
 class Line extends React.Component {
   render() {
-    return <div>{this.props.line.map((word) => <Word word={word}/>)}</div>
+    return <div>{this.props.line.map((word, idx) => <Word key={idx} word={word}/>)}</div>
   }
 }
 
